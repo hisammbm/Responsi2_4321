@@ -86,6 +86,11 @@ namespace RESPONSI2
             // PERINTAH: lengkapi kode untuk menampilkan daftar penjualan yang ada di dalam collection
             int i = 1;
             foreach(Penjualan item in daftarPenjualan){
+                if(item.TK == "T" || item.TK == "t"){ 
+                    Console.WriteLine("{0}) {1}, {2}, {3}, {4}, {5}", i, item.Nota, item.Tanggal, item.Customer, "Tunai", item.TotalNota);
+                }else{
+                    Console.WriteLine("{0}) {1}, {2}, {3}, {4}, {5}", i, item.Nota, item.Tanggal, item.Customer, "Kredit", item.TotalNota);
+                }
             }
 
             Console.WriteLine("\nTekan enter untuk kembali ke menu");
